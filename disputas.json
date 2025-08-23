@@ -1,18 +1,36 @@
 {
   "carwars": {
-    "confirmar cita": "Opción 4 - El agente solo confirma la cita, no ofrece ni vende. Ejemplo: 'Buenos días, llamo para confirmar que su cita está programada para mañana a las 10 AM'.",
-    "llamada unilateral": "No válida - Solo se escucha un lado de la llamada. Ejemplo: Cliente no responde, solo se escucha al agente hablar.",
-    "deja mensaje en buzón": "Opción 5 - Se clasifica como mensaje dejado en buzón de voz. Ejemplo: 'Hola, le llamaba para confirmar su cita, por favor devuélvame la llamada'.",
-    "llamada de seguimiento sin interés": "Opción 2 - El cliente no muestra interés en continuar o no responde positivamente. Ejemplo: 'Lo siento, no estoy interesado'."
-  },
-  "ventas": {
-    "oferta directa": "Opción 1 - El agente ofrece un producto o servicio directamente. Ejemplo: 'Le llamo para ofrecerle un nuevo plan de telefonía'.",
-    "cliente acepta oferta": "Opción 3 - El cliente acepta la oferta del agente. Ejemplo: 'Sí, me interesa contratar el servicio'.",
-    "cliente rechaza oferta": "Opción 2 - El cliente dice que no está interesado. Ejemplo: 'No gracias, no me interesa'."
-  },
-  "soporte": {
-    "resolución de problema": "Opción 1 - El agente resuelve el problema del cliente. Ejemplo: 'Su línea fue restablecida, pruebe ahora'.",
-    "no se resuelve": "Opción 2 - El problema persiste y no se da solución. Ejemplo: 'Lo siento, no puedo ayudarle en este momento'.",
-    "transfiere llamada": "Opción 3 - El agente transfiere la llamada a otra área. Ejemplo: 'Lo voy a transferir con soporte técnico'."
+    "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
+    
+    "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha una parte → Revisar normalmente",
+    
+    "opcion_1": "SÍ: Cliente aceptó venir al concesionario - Cita firme, imprecisa o ya existente",
+    "opcion_1_ejemplo": "Agente: '¿Podría venir?' / Cliente: 'Sí, hoy a las 3:00' o 'Probablemente mañana'",
+    "opcion_1_subtipos": "Cita fecha+hora firme, Cita fecha/hora imprecisa, Cliente ya tenía cita programada",
+    
+    "opcion_2": "NO: Cliente ya NO está en el mercado - Ya compró/vendió, no busca, cuelga sin responder, no está interesado",
+    "opcion_2_ejemplo": "Cliente: 'Ya no estoy buscando auto nuevo' o cuelga sin compartir interés",
+    
+    "opcion_3": "NO: Cliente SÍ está en mercado pero NO aceptó venir - No hubo invitación, rechazó cita, vehículo no disponible, no interesado en modelo específico",
+    "opcion_3_ejemplo": "Cliente: 'No tengo tiempo para ir pronto' o 'Sí quiero Jeep pero no ese modelo'",
+    "opcion_3_nota": "Si tiene intención de comprar/vender en cualquier lugar = está en mercado",
+    
+    "opcion_4": "CORRECCIÓN: Llamada NO sobre vehículos - Buzón de voz, número erróneo, idioma desconocido, tema diferente",
+    "opcion_4_ejemplo": "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía",
+    
+    "keywords": "cita, concesionario, mercado, aceptó, rechazó, buzón, erróneo, idioma, comprar, vender, intercambiar, probar, vehículo",
+    
+    "notas_importantes": [
+      "Llamadas unilaterales: Revisar normalmente según el contenido audible",
+      "Objetivo: Determinar interés en mercado de vehículos en general, no concesionario específico",
+      "Si cliente tiene intención de comprar/vender/intercambiar en cualquier lugar = está en el mercado"
+    ],
+    
+    "mis_experiencias": [
+      "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
+      "Cliente pide que lo llamen después de decidir → Opción 3, no Opción 1",
+      "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión"
+    ]
   }
 }
+
