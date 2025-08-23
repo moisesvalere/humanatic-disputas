@@ -30,7 +30,9 @@
       "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
       "Cliente pide que lo llamen después de decidir → Opción 3, no Opción 1",
       "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión",
-      "Opción 4: Si el agente llama para confirmar cita es la 4 - motivo: según las reglas de reason no se considera una oportunidad de ventas (confirmado por Reduana SH)"
+      "Opción 4: Si el agente llama para confirmar cita es la 4 - motivo: según las reglas de reason no se considera una oportunidad de ventas (confirmado por Reduana SH)",
+        "Opción 4: Si el agente le pregunta al cliente y usa palabras como: siempre va a venir, acordamos, algun indicio de que habian acordado una cita antes pero no se menciona explicitamente es la 4 considerado confirmacion de cita"
     ]
   }
 }
+
