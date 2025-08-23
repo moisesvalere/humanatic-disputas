@@ -32,12 +32,14 @@
       "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión"
     ]
     "mis_experiencias": [
-    "opcion_4: experiencia personal Si el agente llama para confirmar cita es la 4" porque segun las reglas de reason no se considera una oportunidad de ventas confirmado por Reduana una SH xD 
+    "opcion_4: experiencia personal Si el agente llama para confirmar cita es la 4" 
+      "motivo: porque segun las reglas de reason no se considera una oportunidad de ventas confirmado por Reduana una SH xD" 
     ]
   
   }
   
 }
+
 
 
 
