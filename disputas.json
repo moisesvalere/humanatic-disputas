@@ -1,0 +1,18 @@
+{
+  "carwars": {
+    "confirmar cita": "Opción 4 - El agente solo confirma la cita, no ofrece ni vende. Ejemplo: 'Buenos días, llamo para confirmar que su cita está programada para mañana a las 10 AM'.",
+    "llamada unilateral": "No válida - Solo se escucha un lado de la llamada. Ejemplo: Cliente no responde, solo se escucha al agente hablar.",
+    "deja mensaje en buzón": "Opción 5 - Se clasifica como mensaje dejado en buzón de voz. Ejemplo: 'Hola, le llamaba para confirmar su cita, por favor devuélvame la llamada'.",
+    "llamada de seguimiento sin interés": "Opción 2 - El cliente no muestra interés en continuar o no responde positivamente. Ejemplo: 'Lo siento, no estoy interesado'."
+  },
+  "ventas": {
+    "oferta directa": "Opción 1 - El agente ofrece un producto o servicio directamente. Ejemplo: 'Le llamo para ofrecerle un nuevo plan de telefonía'.",
+    "cliente acepta oferta": "Opción 3 - El cliente acepta la oferta del agente. Ejemplo: 'Sí, me interesa contratar el servicio'.",
+    "cliente rechaza oferta": "Opción 2 - El cliente dice que no está interesado. Ejemplo: 'No gracias, no me interesa'."
+  },
+  "soporte": {
+    "resolución de problema": "Opción 1 - El agente resuelve el problema del cliente. Ejemplo: 'Su línea fue restablecida, pruebe ahora'.",
+    "no se resuelve": "Opción 2 - El problema persiste y no se da solución. Ejemplo: 'Lo siento, no puedo ayudarle en este momento'.",
+    "transfiere llamada": "Opción 3 - El agente transfiere la llamada a otra área. Ejemplo: 'Lo voy a transferir con soporte técnico'."
+  }
+}
