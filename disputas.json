@@ -30,11 +30,15 @@
       "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
       "Cliente pide que lo llamen después de decidir → Opción 3, no Opción 1",
       "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión"
-
-      opcion_4: experiencia personal "Si el agente llama para confirmar cita es la 4" porque segun las reglas de reason no se considera una oportunidad de ventas confirmado por Reduana una SH xD 
     ]
+    "mis_experiencias": [
+    "opcion_4: experiencia personal Si el agente llama para confirmar cita es la 4" porque segun las reglas de reason no se considera una oportunidad de ventas confirmado por Reduana una SH xD 
+    ]
+  
   }
+  
 }
+
 
 
 
