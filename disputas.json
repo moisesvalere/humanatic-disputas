@@ -122,7 +122,18 @@
       "No haga suposiciones sobre el resultado de la llamada, solo sobre el motivo."
     ],
     "mis_experiencias": [
-      "Opciones y notas de ejemplo incluidas para referencia rápida."
+      "🎯 OPCIÓN 1 - DISCUSIÓN DE VENTA: Agente llama ofreciendo un vehículo nuevo o consultando sobre el anterior. Ejemplo: 'Le llamamos para informarle que tenemos excelentes ofertas'.",
+      "",
+      "🎯 OPCIÓN 2 - SEGUIMIENTO: Agente llama para revisar una compra anterior o una solicitud de crédito, sin generar nueva venta.",
+      "",
+      "🎯 OPCION 2 - Si el agente llama al cliente por felicitarlo por su cumpleaños es general no es conversacion de ventas",
+      "",
+      "🎯 OPCION 2 - Si el agente llama al cliente pero este lo interrumpe rapidamente y no se puede determinar el motivo de la llamada es la opcion 2 general",
+      "",
+      "🎯 OPCIÓN 3 - CITA EXISTENTE: El agente solo confirma, cambia o cancela citas. Ejemplo: 'No seleccione esta opción si la cita ya pasó'.",
+      "",
+      "🎯 OPCIÓN 4 - LLAMADA NO CONECTADA: La llamada no logró contactar con la parte deseada. Ejemplo: revisar categoría Live Conversation - Outbound para referencia."
     ]
   }
 }
+
