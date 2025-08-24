@@ -50,7 +50,9 @@
       "'me estoy calmando' = Opción 2",
       "'mandame mensaje cuando vengas en camino' = Opción 1",
       "'puede ser que vaya yo te confirmo despues' = Opción 3",
-      "'siempre va a venir a nuestra cita como acordamos' = Opción 4"
+      "'siempre va a venir a nuestra cita como acordamos' = Opción 4",
+      "si la cita no es para ventas es la opcion 4"
     ]
   }
 }
+
