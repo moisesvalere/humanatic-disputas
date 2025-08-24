@@ -114,7 +114,7 @@
   ]
 }
 
-    ],
+  
 
     "opcion_3": "No: el agente solo discutió, confirmó, cambió o canceló una cita existente. Agente llamado para discutir, confirmar, cambiar o cancelar una cita existente para nuevas ventas. Recuerde: las conversaciones sobre citas existentes deben considerarse relacionadas con ventas a menos que el agente o la persona que llama deje en claro que el tema no está relacionado con las ventas.",
     "opcion_3_ejemplo": [
@@ -143,6 +143,7 @@
     ]
   }
 }
+
 
 
 
