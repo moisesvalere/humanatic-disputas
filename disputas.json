@@ -1,4 +1,4 @@
-n{
+{
   "abreviaturas": {
     "cw": "carwars",
     "ssb": "service setter booked",
@@ -10,7 +10,7 @@ n{
   },
   "carwars": {
     "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo relacionado con VENTAS",
-    "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha el agente, los --- representan segments donde el CLIENTE HABLA PERO NO SE ESCUCHA → Evaluar SOLO por el contenido AUDIBLE del agente",
+    "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha el agente, los --- representan segmentos donde el CLIENTE HABLA PERO NO SE ESCUCHA → Evaluar SOLO por el contenido AUDIBLE del agente",
     "reglas_unilaterales": "Llamadas unilaterales: Evaluar IGUAL que llamadas normales pero basándose SOLO en lo que el agente dice. Los --- indican que hubo diálogo pero no audible → Ignorar los --- y enfocarse en el contexto audible",
     "opcion_1": "SÍ: Cliente aceptó venir al concesionario - Cita firme, imprecisa o ya existente",
     "opcion_1_ejemplo": "Agente: '¿Podría venir?' / Cliente: 'Sí, hoy a las 3:00' o 'Probablemente mañana'",
@@ -21,8 +21,10 @@ n{
     "opcion_3_ejemplo": "Cliente: 'No tengo tiempo para ir pronto' o 'Sí quiero Jeep pero no ese modelo'",
     "opcion_3_nota": "Si tiene intención de comprar/vender en cualquier lugar = está en mercado",
     "opcion_4": "CORRECCIÓN: Llamada NO sobre vehículos - Buzón de voz, número erróneo, idioma desconocido, tema diferente",
-    "opcion_4_ejemplo": "el agente programa una cita para servicios o partes u otro departamento que no sea relacionado con Ventas es la opcion 4",
-    "opcion_4_ejemplo": "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía",
+    "opcion_4_ejemplo": [
+      "El agente programa una cita para servicios o partes u otro departamento que no sea relacionado con Ventas es la opcion 4",
+      "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía"
+    ],
     "keywords": "cita, concesionario, mercado, aceptó, rechazó, buzón, erróneo, idioma, comprar, vender, intercambiar, probar, vehículo",
     "notas_importantes": [
       "Llamadas unilaterales: Revisar normalmente según el contenido audible",
@@ -46,7 +48,7 @@ n{
       "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
       "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva) la cita puede ser para ventas compras de vehiculos, cambiar vehiculos, pero no es una oportunidad de nueva visita",
       "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
-      "Agente programa una cita de servicio, partes, cualquier otra cita que no sea para ventas → Opción 4"
+      "Agente programa una cita de servicio, partes, cualquier otra cita que no sea para ventas → Opción 4",
       "🔑 PALABRAS CLAVE CLAVE:",
       "'ustedes me avisan' = Opción 3",
       "'me estoy calmando' = Opción 2",
@@ -56,7 +58,3 @@ n{
     ]
   }
 }
-
-
-
-
