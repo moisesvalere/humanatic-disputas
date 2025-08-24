@@ -9,12 +9,6 @@
     "oscp": "outbound service call purpose"
   },
 
-  "mensajes_error": {
-    "sin_categoria": "❌ **NO ESPECIFICASTE LA CATEGORÍA**\n\n⚠️ Debes empezar con la abreviatura:\n• **cw** - CarWars\n• **ssb** - Service Setter Booked\n• **dsv** - Dealership Sales Visit\n• **rofc** - Reason for Outbound Call\n• **inb** - Inbound\n• **oir** - Outbound Invitation Result\n• **oscp** - Outbound Service Call Purpose\n\nEjemplo: /buscar cw confirmar cita"
-  },
-
-  "abreviaturas_validas": ["cw", "ssb", "dsv", "rofc", "inb", "oir", "oscp"],
-
   "carwars": {
     "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
     
@@ -74,3 +68,4 @@
     ]
   }
 }
+
