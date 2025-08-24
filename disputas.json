@@ -56,7 +56,7 @@
       
       "🎯 OPCIÓN 4 - LLAMADA NO SOBRE VEHÍCULOS:",
       "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
-      "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva)",
+      "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva) la cita puede ser para ventas pero no es una oportunidad de nueva visita",
       "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
       
       "🔑 PALABRAS CLAVE CLAVE:",
@@ -68,4 +68,5 @@
     ]
   }
 }
+
 
