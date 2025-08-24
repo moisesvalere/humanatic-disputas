@@ -45,14 +45,15 @@
       "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
       "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva) la cita puede ser para ventas compras de vehiculos, cambiar vehiculos, pero no es una oportunidad de nueva visita",
       "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
+      "Agente programa una cita de servicio, partes, cualquier otra cita que no sea para ventas → Opción 4"
       "🔑 PALABRAS CLAVE CLAVE:",
       "'ustedes me avisan' = Opción 3",
       "'me estoy calmando' = Opción 2",
       "'mandame mensaje cuando vengas en camino' = Opción 1",
       "'puede ser que vaya yo te confirmo despues' = Opción 3",
-      "'siempre va a venir a nuestra cita como acordamos' = Opción 4",
-      "si la cita no es para ventas es la opcion 4"
+      "'siempre va a venir a nuestra cita como acordamos' = Opción 4"
     ]
   }
 }
+
 
