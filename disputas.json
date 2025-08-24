@@ -2,7 +2,20 @@
   "abreviaturas": {
     "CW": "carwars",
     "SSB": "service setter booked",
-    "si la consulta que haga el usuario no especifica la categoria que desea consultar respondele algo asi como:No puedo responder la consulta porque no especificaste la categoria ni me diste una abreviatura",
+    "DSV":"Dealership sales visit",
+    "Rofc":"Reason for outbount call",
+    "inb":"Inbound",
+    "oir":"Outbound Invitation Result"
+    "oscp":"Outbound Service Call Purpose"
+    {
+  "mensajes_error": {
+    "sin_categoria": "❌ **NO ESPECIFICASTE LA CATEGORÍA**\n\n⚠️ Debes empezar con la abreviatura:\n• **cw** - CarWars\n• **ssb** - Service Setter\n• **vt** - Ventas\n• **st** - Soporte\n\nEjemplo: /buscar cw confirmar cita"
+  },
+
+  "abreviaturas_validas": ["cw", "ssb", "dsv", "rofc", "inb", "oir", "oscp"],
+
+
+}
   },
 
 {
@@ -68,6 +81,7 @@
     ]
   }
 }
+
 
 
 
