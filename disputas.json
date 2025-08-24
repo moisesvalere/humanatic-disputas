@@ -11,57 +11,44 @@
 
   "carwars": {
     "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
-    
     "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha el agente, los --- representan segments donde el CLIENTE HABLA PERO NO SE ESCUCHA → Evaluar SOLO por el contenido AUDIBLE del agente",
-    
     "reglas_unilaterales": "Llamadas unilaterales: Evaluar IGUAL que llamadas normales pero basándose SOLO en lo que el agente dice. Los --- indican que hubo diálogo pero no audible → Ignorar los --- y enfocarse en el contexto audible",
-    
     "opcion_1": "SÍ: Cliente aceptó venir al concesionario - Cita firme, imprecisa o ya existente",
     "opcion_1_ejemplo": "Agente: '¿Podría venir?' / Cliente: 'Sí, hoy a las 3:00' o 'Probablemente mañana'",
     "opcion_1_subtipos": "Cita fecha+hora firme, Cita fecha/hora imprecisa, Cliente ya tenía cita programada",
-    
     "opcion_2": "NO: Cliente ya NO está en el mercado - Ya compró/vendió, no busca, cuelga sin responder, no está interesado",
     "opcion_2_ejemplo": "Cliente: 'Ya no estoy buscando auto nuevo' o cuelga sin compartir interés",
-    
     "opcion_3": "NO: Cliente SÍ está en mercado pero NO aceptó venir - No hubo invitación, rechazó cita, vehículo no disponible, no interesado en modelo específico",
     "opcion_3_ejemplo": "Cliente: 'No tengo tiempo para ir pronto' o 'Sí quiero Jeep pero no ese modelo'",
     "opcion_3_nota": "Si tiene intención de comprar/vender en cualquier lugar = está en mercado",
-    
     "opcion_4": "CORRECCIÓN: Llamada NO sobre vehículos - Buzón de voz, número erróneo, idioma desconocido, tema diferente",
     "opcion_4_ejemplo": "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía",
-
     "keywords": "cita, concesionario, mercado, aceptó, rechazó, buzón, erróneo, idioma, comprar, vender, intercambiar, probar, vehículo",
-    
     "notas_importantes": [
       "Llamadas unilaterales: Revisar normalmente según el contenido audible",
       "Objetivo: Determinar interés en mercado de vehículos en general, no concesionario específico",
       "Si cliente tiene intención de comprar/vender/intercambiar en cualquier lugar = está en el mercado"
     ],
-    
     "mis_experiencias": [
       "🎯 OPCIÓN 1 - CLIENTE ACEPTÓ VENIR:",
       "Cliente confirma que irá el sábado aunque falte hora específica → Opción 1 (confirmación implícita)",
       "Agente menciona 'usted quería venir esta semana' + 'mandame mensaje antes de venir' → Opción 1 (aceptó visita)",
-      
       "🎯 OPCIÓN 2 - CLIENTE NO ESTÁ EN MERCADO:",
       "Llamada se corta sin que cliente responda → Opción 2 (no hay interés demostrado)",
       "Cliente dice 'me estoy calmando con el trabajo' + 'si algo cambia me avisa' → Opción 2 (fuera de mercado actual)",
       "Agente invita al VIP + 'bueno me avisa' → Opción 2 (no hay compromiso ni acción)",
-      
       "🎯 OPCIÓN 3 - CLIENTE EN MERCADO PERO NO ACEPTÓ:",
       "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
       "Cliente pide que lo llamen después de decidir → Opción 3 (no Opción 1)",
       "Cliente dice 'ustedes me avisan' → Opción 3 (delega iniciativa pero mantiene interés)",
       "Cliente dice 'puede ser que vaya' + agente 'llamará el lunes para acordar día' → Opción 3 (no hay cita concreta)",
-      
       "🎯 OPCIÓN 4 - LLAMADA NO SOBRE VEHÍCULOS:",
       "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
       "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva) la cita puede ser para ventas compras de vehiculos, cambiar vehiculos, pero no es una oportunidad de nueva visita",
       "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
-      
       "🔑 PALABRAS CLAVE CLAVE:",
       "'ustedes me avisan' = Opción 3",
-      "'me estoy calmando' = Opción 2", 
+      "'me estoy calmando' = Opción 2",
       "'mandame mensaje' = Opción 1",
       "'puede ser que vaya' = Opción 3",
       "'siempre va a venir' = Opción 4"
@@ -70,71 +57,60 @@
 
   "reason_outbound_for_call": {
     "proposito": "Identificar el motivo por el cual la persona que llama realizó una llamada conectada.",
-    
     "definiciones_utiles": "Conectado: Una llamada se considera conectada cuando la persona que la realizó logró contactar con el contacto deseado, con un portavoz de este o con la empresa a la que pretendía contactar. No es necesario que la llamada se considere atendida, ni importa si el contacto deseado colgó o se desconectó la línea. Si la persona que realizó la llamada logró contactar con el contacto deseado, el resultado de la llamada es irrelevante. Grabaciones unilaterales: En algunas llamadas salientes, es posible que solo escuche la voz de la persona que llama. Esto es intencional. Revise estas llamadas basándose únicamente en el audio que puede escuchar. No haga suposiciones. Motivo de la llamada: Su reseña debe basarse en el motivo de la llamada. El resultado de la llamada no es lo que intenta revisar. Tema poco claro: Algunas llamadas no identifican claramente el tema de la conversación. Cuando esto ocurre, a menos que se indique lo contrario, el tema debe considerarse relacionado con ventas.",
-    
-   "opcion_1": {
-  "descripcion": "Sí: El agente llamó para discutir la compra, venta, intercambio, arrendamiento o prueba de manejo de un vehículo, independientemente de la respuesta del contacto previsto. Algunos intentos de hablar de oportunidades de venta no serán explícitos. La persona que llama no siempre mencionará un vehículo específico, y algunos intentos de hablar de ventas pueden ser indirectos. Sin embargo, si no es claro, asuma que la llamada está relacionada con ventas.",
-  
-  "ejemplos": [
-    "Agente: 'Le llamamos para informarle que tenemos excelentes ofertas en este momento, si desea venir y echar un vistazo'.",
-    "Agente: 'Vemos que nos compró un vehículo el año pasado y nos preguntamos cómo le está yendo'. // Contacto previsto: 'Ha sido bueno'. // Agente: 'Bueno, nos preguntábamos si le interesaría cambiarlo por un modelo más nuevo'.",
-    "Agente: 'Hola, James'. // Contacto previsto: 'Hola, ya compramos un vehículo'. // Agente: '¿Ah, sí? Lo actualizaré en nuestro sistema'. // Contacto previsto: 'Gracias. Adiós'.",
-    "Agente: 'Hola, Megan. Soy Mike de BHA - Ford'. // Contacto previsto: 'Hola, Mike. Hemos decidido que no vamos a comprar un coche nuevo por ahora. Por favor, elimínenos de su lista de llamadas'.",
-    "Agente: 'Le llamo por su visita de ayer. ¿Tiene alguna pregunta sobre el vehículo que estaba viendo?' // Contacto previsto: 'No, estoy bien'. / Agente: 'Si tiene alguna pregunta, hágamelo saber'.",
-    "Agente: 'Hola Bob, solo te estaba devolviendo la llamada sobre ese Corolla usado por el que preguntaste'."
-  ],
-  
-  "detalles_adicionales": [
-    "El resultado de la llamada no importa: el cliente puede ya tener una cita, haber comprado un vehículo o simplemente no estar interesado.",
-    "El agente puede discutir arrendamiento, opciones de finalización del arrendamiento o compra del arrendamiento.",
-    "El agente puede discutir envío de vehículos o consignación.",
-    "Declaraciones del cliente que nieguen venta no cambian el motivo si el agente tenía intención de venta.",
-    "Invitaciones a nuevas citas relacionadas con ventas se consideran ventas, incluso si la cita anterior no se pudo atender.",
-    "Seguimiento a visitas recientes se considera oportunidad de venta aunque la operación aún no esté en curso.",
-    "Discusión de crédito, solicitud de crédito o financiamiento se considera relacionada con ventas a menos que se indique lo contrario."
-  ],
-
-  
-
-   "opcion_2": {
-  "descripcion": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta. Una operación en curso se define como la compra de un vehículo iniciada pero no completada. Una operación no se considera en curso hasta que el vehículo se retira del mercado mediante el depósito, la documentación completa, etc., lo que resulta en que el vehículo ya no está disponible para ser vendido a otro cliente. Esto significa que la presentación o incluso la aprobación de una solicitud por sí sola no se considera una operación en curso, ya que la compra del vehículo aún no se ha iniciado. El agente realizó una llamada para discutir la refinanciación de un préstamo existente. Algunas discusiones de crédito serán para la refinanciación de un préstamo de automóvil, etc., y la refinanciación de un préstamo existente no se considera una nueva oportunidad de venta. El agente fue convocado únicamente para discusión general. El agente llamó por un motivo que está claramente identificado como no relacionado con las ventas.",
-  
-  "ejemplos": [
-    "El agente realizó una llamada para discutir la refinanciación de un préstamo existente.",
-    "El agente fue convocado únicamente para discusión general.",
-    "Agente llamó para dar seguimiento a una compra anterior sin ofrecer nueva oportunidad de venta."
-  ],
-  
-  "detalles_adicionales": [
-    "Operación en curso: compra iniciada pero no completada, vehículo retirado del mercado mediante depósito o trámites.",
-    "La presentación o aprobación de una solicitud por sí sola no se considera operación en curso.",
-    "Refinanciación de préstamo existente no constituye nueva oportunidad de venta.",
-    "Llamadas claramente no relacionadas con ventas se incluyen aquí."
-  ]
-}
-
-  
-
-    "opcion_3": "No: el agente solo discutió, confirmó, cambió o canceló una cita existente. Agente llamado para discutir, confirmar, cambiar o cancelar una cita existente para nuevas ventas. Recuerde: las conversaciones sobre citas existentes deben considerarse relacionadas con ventas a menos que el agente o la persona que llama deje en claro que el tema no está relacionado con las ventas.",
-    "opcion_3_ejemplo": [
-      "No seleccione esta opción si el agente llamó para discutir o reprogramar una cita que ya pasó.",
-      "No seleccione esta opción si el agente llamó para hablar sobre la compra, venta, intercambio o prueba de manejo de un vehículo y le informaron de una cita existente que desconocía previamente."
-    ],
-
-    "opcion_4": "Corrección: la llamada no se conectó con la parte deseada. Puede consultar las instrucciones para la categoría ascendente Conversación en vivo - Saliente si necesita ayuda para comprender qué califica como una llamada conectada a la parte deseada.",
-    "opcion_4_ejemplo": [],
-
+    "opcion_1": {
+      "descripcion": "Sí: El agente llamó para discutir la compra, venta, intercambio, arrendamiento o prueba de manejo de un vehículo, independientemente de la respuesta del contacto previsto. Algunos intentos de hablar de oportunidades de venta no serán explícitos. La persona que llama no siempre mencionará un vehículo específico, y algunos intentos de hablar de ventas pueden ser indirectos. Sin embargo, si no es claro, asuma que la llamada está relacionada con ventas.",
+      "ejemplos": [
+        "Agente: 'Le llamamos para informarle que tenemos excelentes ofertas en este momento, si desea venir y echar un vistazo'.",
+        "Agente: 'Vemos que nos compró un vehículo el año pasado y nos preguntamos cómo le está yendo'. // Contacto previsto: 'Ha sido bueno'. // Agente: 'Bueno, nos preguntábamos si le interesaría cambiarlo por un modelo más nuevo'.",
+        "Agente: 'Hola, James'. // Contacto previsto: 'Hola, ya compramos un vehículo'. // Agente: '¿Ah, sí? Lo actualizaré en nuestro sistema'. // Contacto previsto: 'Gracias. Adiós'.",
+        "Agente: 'Hola, Megan. Soy Mike de BHA - Ford'. // Contacto previsto: 'Hola, Mike. Hemos decidido que no vamos a comprar un coche nuevo por ahora. Por favor, elimínenos de su lista de llamadas'.",
+        "Agente: 'Le llamo por su visita de ayer. ¿Tiene alguna pregunta sobre el vehículo que estaba viendo?' // Contacto previsto: 'No, estoy bien'. / Agente: 'Si tiene alguna pregunta, hágamelo saber'.",
+        "Agente: 'Hola Bob, solo te estaba devolviendo la llamada sobre ese Corolla usado por el que preguntaste'."
+      ],
+      "detalles_adicionales": [
+        "El resultado de la llamada no importa: el cliente puede ya tener una cita, haber comprado un vehículo o simplemente no estar interesado.",
+        "El agente puede discutir arrendamiento, opciones de finalización del arrendamiento o compra del arrendamiento.",
+        "El agente puede discutir envío de vehículos o consignación.",
+        "Declaraciones del cliente que nieguen venta no cambian el motivo si el agente tenía intención de venta.",
+        "Invitaciones a nuevas citas relacionadas con ventas se consideran ventas, incluso si la cita anterior no se pudo atender.",
+        "Seguimiento a visitas recientes se considera oportunidad de venta aunque la operación aún no esté en curso.",
+        "Discusión de crédito, solicitud de crédito o financiamiento se considera relacionada con ventas a menos que se indique lo contrario."
+      ]
+    },
+    "opcion_2": {
+      "descripcion": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta. Una operación en curso se define como la compra de un vehículo iniciada pero no completada. Una operación no se considera en curso hasta que el vehículo se retira del mercado mediante el depósito, la documentación completa, etc., lo que resulta en que el vehículo ya no está disponible para ser vendido a otro cliente. Esto significa que la presentación o incluso la aprobación de una solicitud por sí sola no se considera una operación en curso, ya que la compra del vehículo aún no se ha iniciado. El agente realizó una llamada para discutir la refinanciación de un préstamo existente. Algunas discusiones de crédito serán para la refinanciación de un préstamo de automóvil, etc., y la refinanciación de un préstamo existente no se considera una nueva oportunidad de venta. El agente fue convocado únicamente para discusión general. El agente llamó por un motivo que está claramente identificado como no relacionado con las ventas.",
+      "ejemplos": [
+        "El agente realizó una llamada para discutir la refinanciación de un préstamo existente.",
+        "El agente fue convocado únicamente para discusión general.",
+        "Agente llamó para dar seguimiento a una compra anterior sin ofrecer nueva oportunidad de venta."
+      ],
+      "detalles_adicionales": [
+        "Operación en curso: compra iniciada pero no completada, vehículo retirado del mercado mediante depósito o trámites.",
+        "La presentación o aprobación de una solicitud por sí sola no se considera operación en curso.",
+        "Refinanciación de préstamo existente no constituye nueva oportunidad de venta.",
+        "Llamadas claramente no relacionadas con ventas se incluyen aquí."
+      ]
+    },
+    "opcion_3": {
+      "descripcion": "No: el agente solo discutió, confirmó, cambió o canceló una cita existente. Agente llamado para discutir, confirmar, cambiar o cancelar una cita existente para nuevas ventas. Recuerde: las conversaciones sobre citas existentes deben considerarse relacionadas con ventas a menos que el agente o la persona que llama deje en claro que el tema no está relacionado con las ventas.",
+      "ejemplos": [
+        "No seleccione esta opción si el agente llamó para discutir o reprogramar una cita que ya pasó.",
+        "No seleccione esta opción si el agente llamó para hablar sobre la compra, venta, intercambio o prueba de manejo de un vehículo y le informaron de una cita existente que desconocía previamente."
+      ]
+    },
+    "opcion_4": {
+      "descripcion": "Corrección: la llamada no se conectó con la parte deseada. Puede consultar las instrucciones para la categoría ascendente Conversación en vivo - Saliente si necesita ayuda para comprender qué califica como una llamada conectada a la parte deseada.",
+      "ejemplos": []
+    },
     "keywords": [
       "llamada", "conectada", "ventas", "cita", "seguimiento", "arrendamiento", "envío", "consignación", "oportunidad", "crédito", "financiamiento"
     ],
-
     "notas_importantes": [
       "Revise llamadas basándose únicamente en el audio que se puede escuchar.",
       "Si el motivo no es claro, asuma que la llamada está relacionada con ventas.",
       "No haga suposiciones sobre el resultado de la llamada, solo sobre el motivo."
     ],
-
     "mis_experiencias": [
       "🎯 OPCIÓN 1 - DISCUSIÓN DE VENTA: Agente llama ofreciendo un vehículo nuevo o consultando sobre el anterior. Ejemplo: 'Le llamamos para informarle que tenemos excelentes ofertas'.",
       "🎯 OPCIÓN 2 - SEGUIMIENTO: Agente llama para revisar una compra anterior o una solicitud de crédito, sin generar nueva venta.",
@@ -143,7 +119,3 @@
     ]
   }
 }
-
-
-
-
