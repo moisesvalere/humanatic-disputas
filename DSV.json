@@ -1,0 +1,59 @@
+{
+  "abreviaturas": {
+    "cw": "carwars",
+    "ssb": "service setter booked",
+    "dsv": "dealership sales visit",
+    "rofc": "reason for outbound call",
+    "inb": "inbound",
+    "oir": "outbound invitation result",
+    "oscp": "outbound service call purpose"
+  },
+  "dealership_sales_visit": {
+    "proposito": "Determinar si el cliente asistió físicamente al concesionario para compra, venta, intercambio o prueba de vehículos.",
+    "definiciones_utiles": [
+      "Visita física: Cliente estuvo presente en el concesionario.",
+      "Visita confirmada: Confirmación verbal clara de que el cliente fue.",
+      "Visita fallida: Cliente no asistió o canceló la cita planificada.",
+      "Sin visita: No hay evidencia clara de visita física."
+    ],
+    "opcion_1": "Cliente asistió al concesionario para actividades relacionadas con ventas.",
+    "opcion_1_ejemplo": [
+      "Cliente confirma que fue al concesionario ayer para ver vehículos.",
+      "Agente menciona 'Gracias por visitarnos hoy'."
+    ],
+    "opcion_2": "Cliente no asistió ni hubo visita física, cita cancelada o no confirmada.",
+    "opcion_2_ejemplo": [
+      "Cliente dice 'No pude ir ayer'.",
+      "Agente: 'Lamento que no haya podido venir, reprogramemos'."
+    ],
+    "opcion_3": "Visita incierta: Cliente no confirma ni niega, información insuficiente.",
+    "opcion_3_ejemplo": [
+      "Cliente responde de forma ambigua sin confirmar visita.",
+      "Conversación no tiene datos claros sobre asistencia."
+    ],
+    "opcion_4": "Llamada sin relación directa con visitas al concesionario (servicio, partes, otra gestión).",
+    "opcion_4_ejemplo": [
+      "Conversación solo sobre servicio/garantía.",
+      "No se discute visita física ni cita relacionada con ventas."
+    ],
+    "keywords": [
+      "visita", "concesionario", "asistió", "cita", "cancelada", "confirmada", "presencial"
+    ],
+    "notas_importantes": [
+      "Si hay confirmación clara de visita = opción 1.",
+      "Si cliente canceló o no asistió = opción 2.",
+      "Si no hay datos claros = opción 3.",
+      "Si no está relacionado con ventas = opción 4."
+    ],
+    "mis_experiencias": [
+      "🎯 OPCIÓN 1 - VISITA CONFIRMADA:",
+      "Cliente dice 'Sí, fui ayer a probar el carro' → Opción 1",
+      "🎯 OPCIÓN 2 - NO ASISTIÓ:",
+      "Cliente dice 'No pude ir' → Opción 2",
+      "🎯 OPCIÓN 3 - INCERTEZA:",
+      "Cliente responde con evasivas → Opción 3",
+      "🎯 OPCIÓN 4 - SIN RELACIÓN:",
+      "Solo se habló de mantenimiento → Opción 4"
+    ]
+  }
+}
