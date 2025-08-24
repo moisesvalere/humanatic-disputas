@@ -32,20 +32,36 @@
     ],
     
     "mis_experiencias": [
-      "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
-      "Cliente pide que lo llamen después de decidir → Opción 3, no Opción 1",
-      "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión",
-      "Opción 4: Si el agente llama para confirmar cita es la 4 - motivo: según las reglas de reason no se considera una oportunidad de ventas (confirmado por Reduana SH)",
-      "Opción 4: Si el agente le pregunta al cliente y usa palabras como: siempre va a venir, acordamos, algun indicio de que habian acordado una cita antes pero no se menciona explicitamente es la 4 considerado confirmacion de cita",
-      "Opcion 1: Cliente dice que llamará para confirmar a qué hora va el sabado... es un cita en tiempo flojo ya confirmo que iba a ir a pesar que le falta la hora por eso es la opcion 1",
-      "Opcion 2:Agente llama para saber si está interesado en vender su carro, al final se corta la llamada y no dio chance de que el cliente respondiera... segun humanatic esta llamada en carwar deberia de considerarse como la 2 el cliente corto",
-      "Opcion 2:Agente llama y el cliente dice 'me estoy calmando un poquito porque se me calmó el trabajo' y el cliente dice que si algo cambia que le haga saber. es la opcion 2 porque no se puede saber cuando estara en el mercado nuevamente no se configura nada el agente no dice que va a llamar hacer seguimiento ni nada",
-      "Opcion 2: Llamada de Agente: invita al cliente a pasar al departamento vip, al final dice la agente 'bueno me avisa'",
-      "Opcion 1: Agente dice 'estabamos hablando hace días atrás que usted quería venir para acá que podía ser esta semana o no sé', y al final dice mandame un mensaje antes de venir para acá... es la opcion 1 primero no existe cita previa porque no hay una fecha fija y segundo el mandame un mensaje antes de venir para aca sugiere que el cliente acepto la visita",
-      "Opcion 3: CW si la agente llama hablan de un vehiculo tal que si tal precio....  el cliente dice puede ser que valla, el agente dice que llamara el lunes para ponerse de acuerdo que dia de la semana que viene para hacer una cita... es la opcion 3 porque no han concretado una cita ni un dia en especifico tampoco"
+       "🎯 OPCIÓN 1 - CLIENTE ACEPTÓ VENIR:",
+  "Cliente confirma que irá el sábado aunque falte hora específica → Opción 1 (confirmación implícita)",
+  "Agente menciona 'usted quería venir esta semana' + 'mandame mensaje antes de venir' → Opción 1 (aceptó visita)",
+  
+  "🎯 OPCIÓN 2 - CLIENTE NO ESTÁ EN MERCADO:",
+  "Llamada se corta sin que cliente responda → Opción 2 (no hay interés demostrado)",
+  "Cliente dice 'me estoy calmando con el trabajo' + 'si algo cambia me avisa' → Opción 2 (fuera de mercado actual)",
+  "Agente invita al VIP + 'bueno me avisa' → Opción 2 (no hay compromiso ni acción)",
+  
+  "🎯 OPCIÓN 3 - CLIENTE EN MERCADO PERO NO ACEPTÓ:",
+  "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
+  "Cliente pide que lo llamen después de decidir → Opción 3 (no Opción 1)",
+  "Cliente dice 'ustedes me avisan' → Opción 3 (delega iniciativa pero mantiene interés)",
+  "Cliente dice 'puede ser que vaya' + agente 'llamará el lunes para acordar día' → Opción 3 (no hay cita concreta)",
+  
+  "🎯 OPCIÓN 4 - LLAMADA NO SOBRE VEHÍCULOS:",
+  "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
+  "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva)",
+  "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
+  
+  "🔑 PALABRAS CLAVE CLAVE:",
+  "'ustedes me avisan' = Opción 3",
+  "'me estoy calmando' = Opción 2", 
+  "'mandame mensaje' = Opción 1",
+  "'puede ser que vaya' = Opción 3",
+  "'siempre va a venir' = Opción 4"
     ]
   }
 }
+
 
 
 
