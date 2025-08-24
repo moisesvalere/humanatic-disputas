@@ -1,29 +1,23 @@
 {
   "abreviaturas": {
-    "CW": "carwars",
-    "SSB": "service setter booked",
-    "DSV":"Dealership sales visit",
-    "Rofc":"Reason for outbount call",
-    "inb":"Inbound",
-    "oir":"Outbound Invitation Result"
-    "oscp":"Outbound Service Call Purpose"
-    {
+    "cw": "carwars",
+    "ssb": "service setter booked",
+    "dsv": "dealership sales visit",
+    "rofc": "reason for outbound call",
+    "inb": "inbound",
+    "oir": "outbound invitation result",
+    "oscp": "outbound service call purpose"
+  },
+
   "mensajes_error": {
-    "sin_categoria": "❌ **NO ESPECIFICASTE LA CATEGORÍA**\n\n⚠️ Debes empezar con la abreviatura:\n• **cw** - CarWars\n• **ssb** - Service Setter\n• **vt** - Ventas\n• **st** - Soporte\n\nEjemplo: /buscar cw confirmar cita"
+    "sin_categoria": "❌ **NO ESPECIFICASTE LA CATEGORÍA**\n\n⚠️ Debes empezar con la abreviatura:\n• **cw** - CarWars\n• **ssb** - Service Setter Booked\n• **dsv** - Dealership Sales Visit\n• **rofc** - Reason for Outbound Call\n• **inb** - Inbound\n• **oir** - Outbound Invitation Result\n• **oscp** - Outbound Service Call Purpose\n\nEjemplo: /buscar cw confirmar cita"
   },
 
   "abreviaturas_validas": ["cw", "ssb", "dsv", "rofc", "inb", "oir", "oscp"],
 
-
-}
-  },
-
-{
   "carwars": {
     "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
     
-    "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha una parte → Revisar normalmente",
-
     "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha el agente, los --- representan segments donde el CLIENTE HABLA PERO NO SE ESCUCHA → Evaluar SOLO por el contenido AUDIBLE del agente",
     
     "reglas_unilaterales": "Llamadas unilaterales: Evaluar IGUAL que llamadas normales pero basándose SOLO en lo que el agente dice. Los --- indican que hubo diálogo pero no audible → Ignorar los --- y enfocarse en el contexto audible",
@@ -42,7 +36,6 @@
     "opcion_4": "CORRECCIÓN: Llamada NO sobre vehículos - Buzón de voz, número erróneo, idioma desconocido, tema diferente",
     "opcion_4_ejemplo": "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía",
 
-    
     "keywords": "cita, concesionario, mercado, aceptó, rechazó, buzón, erróneo, idioma, comprar, vender, intercambiar, probar, vehículo",
     
     "notas_importantes": [
@@ -52,44 +45,32 @@
     ],
     
     "mis_experiencias": [
-       "🎯 OPCIÓN 1 - CLIENTE ACEPTÓ VENIR:",
-  "Cliente confirma que irá el sábado aunque falte hora específica → Opción 1 (confirmación implícita)",
-  "Agente menciona 'usted quería venir esta semana' + 'mandame mensaje antes de venir' → Opción 1 (aceptó visita)",
-  
-  "🎯 OPCIÓN 2 - CLIENTE NO ESTÁ EN MERCADO:",
-  "Llamada se corta sin que cliente responda → Opción 2 (no hay interés demostrado)",
-  "Cliente dice 'me estoy calmando con el trabajo' + 'si algo cambia me avisa' → Opción 2 (fuera de mercado actual)",
-  "Agente invita al VIP + 'bueno me avisa' → Opción 2 (no hay compromiso ni acción)",
-  
-  "🎯 OPCIÓN 3 - CLIENTE EN MERCADO PERO NO ACEPTÓ:",
-  "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
-  "Cliente pide que lo llamen después de decidir → Opción 3 (no Opción 1)",
-  "Cliente dice 'ustedes me avisan' → Opción 3 (delega iniciativa pero mantiene interés)",
-  "Cliente dice 'puede ser que vaya' + agente 'llamará el lunes para acordar día' → Opción 3 (no hay cita concreta)",
-  
-  "🎯 OPCIÓN 4 - LLAMADA NO SOBRE VEHÍCULOS:",
-  "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
-  "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva)",
-  "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
-  
-  "🔑 PALABRAS CLAVE CLAVE:",
-  "'ustedes me avisan' = Opción 3",
-  "'me estoy calmando' = Opción 2", 
-  "'mandame mensaje' = Opción 1",
-  "'puede ser que vaya' = Opción 3",
-  "'siempre va a venir' = Opción 4"
+      "🎯 OPCIÓN 1 - CLIENTE ACEPTÓ VENIR:",
+      "Cliente confirma que irá el sábado aunque falte hora específica → Opción 1 (confirmación implícita)",
+      "Agente menciona 'usted quería venir esta semana' + 'mandame mensaje antes de venir' → Opción 1 (aceptó visita)",
+      
+      "🎯 OPCIÓN 2 - CLIENTE NO ESTÁ EN MERCADO:",
+      "Llamada se corta sin que cliente responda → Opción 2 (no hay interés demostrado)",
+      "Cliente dice 'me estoy calmando con el trabajo' + 'si algo cambia me avisa' → Opción 2 (fuera de mercado actual)",
+      "Agente invita al VIP + 'bueno me avisa' → Opción 2 (no hay compromiso ni acción)",
+      
+      "🎯 OPCIÓN 3 - CLIENTE EN MERCADO PERO NO ACEPTÓ:",
+      "Cliente debe consultar con pareja antes de agendar → Opción 3 (SH aceptó 2024-01-25)",
+      "Cliente pide que lo llamen después de decidir → Opción 3 (no Opción 1)",
+      "Cliente dice 'ustedes me avisan' → Opción 3 (delega iniciativa pero mantiene interés)",
+      "Cliente dice 'puede ser que vaya' + agente 'llamará el lunes para acordar día' → Opción 3 (no hay cita concreta)",
+      
+      "🎯 OPCIÓN 4 - LLAMADA NO SOBRE VEHÍCULOS:",
+      "Buzón de voz con mensaje completo → Opción 4 (sin conexión)",
+      "Agente llama para confirmar cita existente → Opción 4 (no es oportunidad nueva)",
+      "Agente usa palabras como 'siempre va a venir', 'acordamos' (sin cita explícita) → Opción 4 (confirmación, no venta)",
+      
+      "🔑 PALABRAS CLAVE CLAVE:",
+      "'ustedes me avisan' = Opción 3",
+      "'me estoy calmando' = Opción 2", 
+      "'mandame mensaje' = Opción 1",
+      "'puede ser que vaya' = Opción 3",
+      "'siempre va a venir' = Opción 4"
     ]
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
