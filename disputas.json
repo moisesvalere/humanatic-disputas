@@ -21,6 +21,7 @@ n{
     "opcion_3_ejemplo": "Cliente: 'No tengo tiempo para ir pronto' o 'Sí quiero Jeep pero no ese modelo'",
     "opcion_3_nota": "Si tiene intención de comprar/vender en cualquier lugar = está en mercado",
     "opcion_4": "CORRECCIÓN: Llamada NO sobre vehículos - Buzón de voz, número erróneo, idioma desconocido, tema diferente",
+    "opcion_4_ejemplo": "el agente programa una cita para servicios o partes u otro departamento que no sea relacionado con Ventas es la opcion 4",
     "opcion_4_ejemplo": "Buzón de voz completo, audio no identificable, llamada sobre servicio/garantía",
     "keywords": "cita, concesionario, mercado, aceptó, rechazó, buzón, erróneo, idioma, comprar, vender, intercambiar, probar, vehículo",
     "notas_importantes": [
@@ -55,6 +56,7 @@ n{
     ]
   }
 }
+
 
 
 
