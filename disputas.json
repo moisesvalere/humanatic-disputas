@@ -97,10 +97,23 @@
 
   
 
-    "opcion_2": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta.",
-    "opcion_2_ejemplo": [
-      "El agente realizó una llamada para discutir la refinanciación de un préstamo existente.",
-      "El agente fue convocado únicamente para discusión general."
+   "opcion_2": {
+  "descripcion": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta. Una operación en curso se define como la compra de un vehículo iniciada pero no completada. Una operación no se considera en curso hasta que el vehículo se retira del mercado mediante el depósito, la documentación completa, etc., lo que resulta en que el vehículo ya no está disponible para ser vendido a otro cliente. Esto significa que la presentación o incluso la aprobación de una solicitud por sí sola no se considera una operación en curso, ya que la compra del vehículo aún no se ha iniciado. El agente realizó una llamada para discutir la refinanciación de un préstamo existente. Algunas discusiones de crédito serán para la refinanciación de un préstamo de automóvil, etc., y la refinanciación de un préstamo existente no se considera una nueva oportunidad de venta. El agente fue convocado únicamente para discusión general. El agente llamó por un motivo que está claramente identificado como no relacionado con las ventas.",
+  
+  "ejemplos": [
+    "El agente realizó una llamada para discutir la refinanciación de un préstamo existente.",
+    "El agente fue convocado únicamente para discusión general.",
+    "Agente llamó para dar seguimiento a una compra anterior sin ofrecer nueva oportunidad de venta."
+  ],
+  
+  "detalles_adicionales": [
+    "Operación en curso: compra iniciada pero no completada, vehículo retirado del mercado mediante depósito o trámites.",
+    "La presentación o aprobación de una solicitud por sí sola no se considera operación en curso.",
+    "Refinanciación de préstamo existente no constituye nueva oportunidad de venta.",
+    "Llamadas claramente no relacionadas con ventas se incluyen aquí."
+  ]
+}
+
     ],
 
     "opcion_3": "No: el agente solo discutió, confirmó, cambió o canceló una cita existente. Agente llamado para discutir, confirmar, cambiar o cancelar una cita existente para nuevas ventas. Recuerde: las conversaciones sobre citas existentes deben considerarse relacionadas con ventas a menos que el agente o la persona que llama deje en claro que el tema no está relacionado con las ventas.",
@@ -130,5 +143,6 @@
     ]
   }
 }
+
 
 
