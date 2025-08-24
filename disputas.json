@@ -93,9 +93,9 @@
     "Invitaciones a nuevas citas relacionadas con ventas se consideran ventas, incluso si la cita anterior no se pudo atender.",
     "Seguimiento a visitas recientes se considera oportunidad de venta aunque la operación aún no esté en curso.",
     "Discusión de crédito, solicitud de crédito o financiamiento se considera relacionada con ventas a menos que se indique lo contrario."
-  ]
-}
-    ],
+  ],
+
+  
 
     "opcion_2": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta.",
     "opcion_2_ejemplo": [
@@ -130,4 +130,5 @@
     ]
   }
 }
+
 
