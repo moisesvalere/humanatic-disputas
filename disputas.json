@@ -1,4 +1,4 @@
-{
+n{
   "abreviaturas": {
     "cw": "carwars",
     "ssb": "service setter booked",
@@ -9,7 +9,7 @@
     "oscp": "outbound service call purpose"
   },
   "carwars": {
-    "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
+    "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo relacionado con VENTAS",
     "definiciones_utiles": "Conectada: Llamada con comunicación real. Sin conexión: Buzón de voz, número erróneo, solo timbre → Opción 4. Unilateral: Solo se escucha el agente, los --- representan segments donde el CLIENTE HABLA PERO NO SE ESCUCHA → Evaluar SOLO por el contenido AUDIBLE del agente",
     "reglas_unilaterales": "Llamadas unilaterales: Evaluar IGUAL que llamadas normales pero basándose SOLO en lo que el agente dice. Los --- indican que hubo diálogo pero no audible → Ignorar los --- y enfocarse en el contexto audible",
     "opcion_1": "SÍ: Cliente aceptó venir al concesionario - Cita firme, imprecisa o ya existente",
@@ -55,5 +55,6 @@
     ]
   }
 }
+
 
 
