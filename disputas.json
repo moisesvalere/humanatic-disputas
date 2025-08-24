@@ -32,9 +32,11 @@
       "Buzón de voz con mensaje completo sobre vehículo → Opción 4, es sin conexión",
       "Opción 4: Si el agente llama para confirmar cita es la 4 - motivo: según las reglas de reason no se considera una oportunidad de ventas (confirmado por Reduana SH)",
       "Opción 4: Si el agente le pregunta al cliente y usa palabras como: siempre va a venir, acordamos, algun indicio de que habian acordado una cita antes pero no se menciona explicitamente es la 4 considerado confirmacion de cita",
-      "Opcion 1: Cliente dice que llamará para confirmar a qué hora va el sabado... es un cita en tiempo flojo ya confirmo que iba a ir a pesar que le falta la hora por eso es la opcion 1"
+      "Opcion 1: Cliente dice que llamará para confirmar a qué hora va el sabado... es un cita en tiempo flojo ya confirmo que iba a ir a pesar que le falta la hora por eso es la opcion 1",
+      "Opcion 2:Agente llama para saber si está interesado en vender su carro, al final se corta la llamada y no dio chance de que el cliente respondiera... segun humanatic esta llamada en carwar deberia de considerarse como la 2 el cliente corto"
     ]
   }
 }
+
 
 
