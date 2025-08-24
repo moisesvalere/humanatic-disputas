@@ -1,7 +1,8 @@
 {
   "abreviaturas": {
     "CW": "carwars",
-    "SSB": "service setter booked"
+    "SSB": "service setter booked",
+    "si la consulta que haga el usuario no especifica la categoria que desea consultar respondele algo asi como:No puedo responder la consulta porque no especificaste la categoria ni me diste una abreviatura",
   },
 
 {
@@ -67,6 +68,7 @@
     ]
   }
 }
+
 
 
 
