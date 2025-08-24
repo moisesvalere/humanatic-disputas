@@ -9,51 +9,79 @@
     "oscp": "outbound service call purpose"
   },
   "dealership_sales_visit": {
-    "proposito": "Determinar si el cliente asistió físicamente al concesionario para compra, venta, intercambio o prueba de vehículos.",
+    "proposito": "El propósito de la categoría Visita de ventas al concesionario es determinar si el agente o la persona que llamó intentó programar una visita al concesionario.",
     "definiciones_utiles": [
-      "Visita física: Cliente estuvo presente en el concesionario.",
-      "Visita confirmada: Confirmación verbal clara de que el cliente fue.",
-      "Visita fallida: Cliente no asistió o canceló la cita planificada.",
-      "Sin visita: No hay evidencia clara de visita física."
+      "Agente cualificado: Un empleado que puede ayudar a la persona que llama con su consulta. En ocasiones, el empleado cualificado podría necesitar devolver la llamada para ofrecer una respuesta o solución. Mientras sea el mismo empleado quien devuelva la llamada, se considera que la llamada está conectada.",
+      "Agente no cualificado: Un empleado que no puede asistir a la persona que llama con su consulta. Una persona que llama puede comunicarse con un empleado no cualificado y mantener una conversación, pero no se considera una llamada conectada a menos que se conecte con alguien que pueda asistirla con su consulta. Si la llamada no se conecta con un empleado cualificado en vivo o si se pierde la conexión antes de compartir la información de contacto o acordar una cita, se debe seleccionar la opción de corrección y dejar el cuadro de resumen sin modificar.",
+      "Conversación sobre inventario: Para que la llamada se considere una conversación sobre inventario, la persona que llama debe buscar comprar, arrendar o intercambiar un vehículo. Si no se trata de una conversación sobre inventario, se debe seleccionar la opción de corrección y dejar el recuadro de resumen sin tocar."
     ],
-    "opcion_1": "Cliente asistió al concesionario para actividades relacionadas con ventas.",
+    "opcion_1": "Sí, en un momento específico o en un rango de tiempo dentro de 1 hora",
     "opcion_1_ejemplo": [
       "Cliente confirma que fue al concesionario ayer para ver vehículos.",
-      "Agente menciona 'Gracias por visitarnos hoy'."
+      "La persona que llamó acordó visitar el concesionario en una fecha y hora específicas.",
+      "Voy a entrar y echar un vistazo a las 4:00",
+      "Pasaré alrededor de las 3:00 el sábado",
+      "Mi marido probablemente estará allí alrededor de las 10:00",
+      "Intentaré ir a probarlo al mediodía",
+      "Estoy en camino ahora mismo y estaré allí en unos minutos",
+      "La persona que llama ha estimado el tiempo que le tomará llegar y el tiempo se encuentra dentro de un rango de una hora Ejemplo: Pasaré en 30 minutos si todavía está en el lote | Agente: Lo comprobaré y te llamo enseguida",
+      "La persona que llamó aceptó una visita dentro de un período de una hora. Ejemplo: Sí, estaré allí en media hora aproximadamente",
+      "Sí, estaré allí en 45-60 minutos / 45-60 minutos es un período de tiempo de 15 minutos que está dentro del rango de una hora.",
+      "La persona que llamó aceptó una visita por un horario flexible, pero el agente la fijó para una hora fija ejemplo: Probablemente pueda estar allí entre las 6:00 y las 8:00 / Está bien, te apunto para las 7:00 entonces",
+      "La persona que llama es una persona sin cita previa que ya se encuentra en el lote."
     ],
-    "opcion_2": "Cliente no asistió ni hubo visita física, cita cancelada o no confirmada.",
+    "opcion_2": "Sí, en un horario flexible o rango de tiempo superior a 1 hora",
     "opcion_2_ejemplo": [
-      "Cliente dice 'No pude ir ayer'.",
-      "Agente: 'Lamento que no haya podido venir, reprogramemos'."
-    ],
-    "opcion_3": "Visita incierta: Cliente no confirma ni niega, información insuficiente.",
+          "Agente: 'Lamento que no haya podido venir, reprogramemos'.",
+          "La persona que llama aceptó una visita en una fecha y hora flexibles.",
+          "Pasaré por aquí algún día hoy",
+          "Mi esposa irá allí el sábado",
+          "Podría estar allí para probarlo esta noche",
+          "Salgo del trabajo a las 5:00 y pasaré después de esa hora",
+          "Llegaré allí antes de las 3:00 Antes de las 3:00 representa cualquier momento previo a las 3:00.",
+          "Me dirijo hacia ti ahora. / A menos que la persona que llama especifique cuánto tiempo le tomará llegar, no podemos asumir esta información, y no se puede asumir que ocurrirá dentro de un rango de tiempo de una hora.",
+          "La persona que llama aceptó visitar el concesionario, pero se aproxima a un período de tiempo mayor a una hora. Ejemplo: Estaré allí esta noche entre las 7:00 y las 9:00",
+          "La persona que llama dice que vendrá a echar un vistazo, pero no especifica cuándo. Ejemplo: Vendré por aquí / Intentaré pasar pronto",
+          "La persona que llamó expresó su intención de visitar el concesionario incluso si primero se necesita información de seguimiento. Ejemplo:Voy a venir este fin de semana, pero antes, ¿me enviarías algunas fotos adicionales de ese camión? / Si logras que tu gerente baje ese precio, iré esta noche / Pasaré esta noche si aún está disponible | Agente: Déjame comprobar si aún está disponible y te llamo",
+          "La persona que llamó aceptó una posible visita. ejemplo: Quizás venga a echarle un vistazo más tarde / Iré a echarle un vistazo si tengo oportunidad / Si salgo temprano del trabajo, pasaré por allí / Si no encuentro nada más, pasaré este fin de semana"
+          ],
+    "opcion_3": "No, se solicitó/mencionó la visita pero no hubo acuerdo",
     "opcion_3_ejemplo": [
-      "Cliente responde de forma ambigua sin confirmar visita.",
-      "Conversación no tiene datos claros sobre asistencia."
+      "La persona que llamó expresó interés en visitar el concesionario, pero una parte de la conversación anuló su deseo o necesidad de visitarlo. ejemplo: Quiero salir del clóset, pero primero necesito hablar con mi esposo, y si decidimos hacerlo te avisaremos",
+      "Vi un auto que me interesa en su sitio web y pensaba visitarlo este fin de semana si tiene todo lo que busco. La persona que llama y el agente hablan sobre el vehículo y descubren que la persona que llama no está interesada debido a su estado. No se comenta más información y no se acuerda la visita, ya que ya no es necesario ni deseado.",
+      "El agente solicitó/mencionó que la persona que llamó visitaría el concesionario, pero esta no respondió a lo solicitado/mencionado.",
+      "La persona que llama rechazó la solicitud del agente de visitar el concesionario.",
+      "La persona que llamó expresó interés pero no manifestó intención de visitar el concesionario.",
+      "La persona que llamó expresó interés en visitar el concesionario, pero una parte de la conversación anuló su deseo o necesidad de visitarlo."
+
     ],
-    "opcion_4": "Llamada sin relación directa con visitas al concesionario (servicio, partes, otra gestión).",
+    "opcion_4": "No, no se discutió una nueva visita.",
     "opcion_4_ejemplo": [
-      "Conversación solo sobre servicio/garantía.",
-      "No se discute visita física ni cita relacionada con ventas."
+      "La persona que llamó presentó una oportunidad de venta de inventario, pero no se solicitó ni mencionó ninguna visita al concesionario.",
+      "El agente preguntó la ubicación de la persona que llamó, pero no se solicitó ni mencionó ninguna visita al concesionario.",
+      "La persona que llama menciona que vive fuera del estado y no se solicitó ni mencionó ninguna visita al concesionario.",
+      "La persona que llama pregunta sobre la entrega/el envío, pero no se solicitó ni se mencionó ninguna visita al concesionario.",
+      "La persona que llama mencionó claramente que ya tiene una visita programada y que ahora llama para discutir detalles adicionales o reprogramar la próxima cita.",
+      "Para que se considere una cita existente, la persona que llama debe indicar claramente que ya tiene una visita existente programada. ejemplo: Tengo una cita programada para la 1:00 de hoy, pero me preguntaba si podría darme algunos detalles más sobre ese auto",
+      "Tengo previsto venir esta tarde, pero tengo algunas preguntas más antes de probar el coche",
+      "Tengo que reunirme hoy con mi agente de ventas para ver ese camión",
+      "Hay una diferencia entre una cita existente claramente establecida y alguien que simplemente afirma que ya tenía previsto acudir. Ejemplo: NO es una cita existente: Vengo hoy y tengo algunas preguntas sobre el auto que voy a ver / NO es una cita existente: Tenía pensado estar allí esta mañana, pero me preguntaba si podría darme algunos detalles más sobre la furgoneta."
+            
     ],
-    "keywords": [
-      "visita", "concesionario", "asistió", "cita", "cancelada", "confirmada", "presencial"
+
+        "opcion_5": "No, no se discutió una nueva visita.",
+    "opcion_5_ejemplo": [
+      "La llamada no representa una oportunidad de venta de inventario para comprar, vender o intercambiar un vehículo.",
+      "La persona que llama mencionó que ya tiene una visita programada, pero que la cancela porque ya no está en el mercado.",
+      "La llamada es sobre servicio automotriz.",
+      "La llamada es sobre repuestos para automóviles.",  
+      "La llamada es sobre una colisión de automóvil o un taller de carrocería."
+      
+            
     ],
-    "notas_importantes": [
-      "Si hay confirmación clara de visita = opción 1.",
-      "Si cliente canceló o no asistió = opción 2.",
-      "Si no hay datos claros = opción 3.",
-      "Si no está relacionado con ventas = opción 4."
-    ],
+
     "mis_experiencias": [
-      "🎯 OPCIÓN 1 - VISITA CONFIRMADA:",
-      "Cliente dice 'Sí, fui ayer a probar el carro' → Opción 1",
-      "🎯 OPCIÓN 2 - NO ASISTIÓ:",
-      "Cliente dice 'No pude ir' → Opción 2",
-      "🎯 OPCIÓN 3 - INCERTEZA:",
-      "Cliente responde con evasivas → Opción 3",
-      "🎯 OPCIÓN 4 - SIN RELACIÓN:",
-      "Solo se habló de mantenimiento → Opción 4"
+       ""
     ]
   }
 }
