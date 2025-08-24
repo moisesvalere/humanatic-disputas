@@ -68,6 +68,51 @@
     ]
   }
 }
+"reason_outbound_for_call": {
+  "proposito": "Identificar el motivo por el cual la persona que llama realizó una llamada conectada.",
+  
+  "definiciones_utiles": "Conectado: Una llamada se considera conectada cuando la persona que la realizó logró contactar con el contacto deseado, con un portavoz de este o con la empresa a la que pretendía contactar. No es necesario que la llamada se considere atendida, ni importa si el contacto deseado colgó o se desconectó la línea. Si la persona que realizó la llamada logró contactar con el contacto deseado, el resultado de la llamada es irrelevante. Grabaciones unilaterales: En algunas llamadas salientes, es posible que solo escuche la voz de la persona que llama. Esto es intencional. Revise estas llamadas basándose únicamente en el audio que puede escuchar. No haga suposiciones. Motivo de la llamada: Su reseña debe basarse en el motivo de la llamada. El resultado de la llamada no es lo que intenta revisar. Tema poco claro: Algunas llamadas no identifican claramente el tema de la conversación. Cuando esto ocurre, a menos que se indique lo contrario, el tema debe considerarse relacionado con ventas.",
+  
+  "opcion_1": "Sí: El agente llamó para discutir la compra, venta, intercambio, arrendamiento o prueba de manejo de un vehículo, independientemente de la respuesta del contacto previsto. Algunos intentos de hablar de oportunidades de venta no serán explícitos. La persona que llama no siempre mencionará un vehículo específico, y algunos intentos de hablar de ventas pueden ser indirectos. Sin embargo, si no es claro, asuma que la llamada está relacionada con ventas.",
+  "opcion_1_ejemplo": [
+    "Agente: 'Le llamamos para informarle que tenemos excelentes ofertas en este momento, si desea venir y echar un vistazo'.",
+    "Agente: 'Vemos que nos compró un vehículo el año pasado y nos preguntamos cómo le está yendo'. // Contacto previsto: 'Ha sido bueno'. // Agente: 'Bueno, nos preguntábamos si le interesaría cambiarlo por un modelo más nuevo'."
+  ],
+
+  "opcion_2": "No: seguimiento de una compra anterior / discusión general. El agente llamó para dar seguimiento a una compra anterior. Esto es diferente a una llamada en la que el agente preguntó sobre una compra anterior para adquirir un vehículo usado u ofrecer una nueva oportunidad de venta. El agente llamó para discutir un trato que ya está en progreso. Las operaciones que ya están en curso no representan nuevas oportunidades de venta.",
+  "opcion_2_ejemplo": [
+    "El agente realizó una llamada para discutir la refinanciación de un préstamo existente.",
+    "El agente fue convocado únicamente para discusión general."
+  ],
+
+  "opcion_3": "No: el agente solo discutió, confirmó, cambió o canceló una cita existente. Agente llamado para discutir, confirmar, cambiar o cancelar una cita existente para nuevas ventas. Recuerde: las conversaciones sobre citas existentes deben considerarse relacionadas con ventas a menos que el agente o la persona que llama deje en claro que el tema no está relacionado con las ventas.",
+  "opcion_3_ejemplo": [
+    "No seleccione esta opción si el agente llamó para discutir o reprogramar una cita que ya pasó.",
+    "No seleccione esta opción si el agente llamó para hablar sobre la compra, venta, intercambio o prueba de manejo de un vehículo y le informaron de una cita existente que desconocía previamente."
+  ],
+
+  "opcion_4": "Corrección: la llamada no se conectó con la parte deseada. Puede consultar las instrucciones para la categoría ascendente Conversación en vivo - Saliente si necesita ayuda para comprender qué califica como una llamada conectada a la parte deseada.",
+  "opcion_4_ejemplo": [],
+
+  "keywords": [
+    "llamada", "conectada", "ventas", "cita", "seguimiento", "arrendamiento", "envío", "consignación", "oportunidad", "crédito", "financiamiento"
+  ],
+
+  "notas_importantes": [
+    "Revise llamadas basándose únicamente en el audio que se puede escuchar.",
+    "Si el motivo no es claro, asuma que la llamada está relacionada con ventas.",
+    "No haga suposiciones sobre el resultado de la llamada, solo sobre el motivo."
+  ],
+
+  "mis_experiencias": [
+    "🎯 OPCIÓN 1 - DISCUSIÓN DE VENTA: Agente llama ofreciendo un vehículo nuevo o consultando sobre el anterior. Ejemplo: 'Le llamamos para informarle que tenemos excelentes ofertas'.",
+    "🎯 OPCIÓN 2 - SEGUIMIENTO: Agente llama para revisar una compra anterior o una solicitud de crédito, sin generar nueva venta.",
+    "🎯 OPCIÓN 3 - CITA EXISTENTE: El agente solo confirma, cambia o cancela citas. Ejemplo: 'No seleccione esta opción si la cita ya pasó'.",
+    "🎯 OPCIÓN 4 - LLAMADA NO CONECTADA: La llamada no logró contactar con la parte deseada. Ejemplo: revisar categoría Live Conversation - Outbound para referencia."
+  ]
+}
+
+
 
 
 
