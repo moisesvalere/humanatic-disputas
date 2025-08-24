@@ -1,4 +1,10 @@
 {
+  "abreviaturas": {
+    "CW": "carwars",
+    "SSB": "service setter booked"
+  },
+
+{
   "carwars": {
     "proposito": "Determinar si el cliente aceptó ir al concesionario para comprar/vender/intercambiar/probar un vehículo",
     
@@ -61,6 +67,7 @@
     ]
   }
 }
+
 
 
 
